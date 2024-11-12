@@ -1,0 +1,68 @@
+/* Custom styling for DataTables */
+#assignmentsTable {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+#assignmentsTable thead {
+  background-color: #e91e63;
+  color: white;
+}
+
+#assignmentsTable th,
+#assignmentsTable td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 15px;
+}
+
+.dataTables_filter input {
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid #e91e63;
+  padding: 5px 10px;
+}
+
+/* Styling for pagination controls */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  background-color: #e91e63;
+  color: white;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #e91e63;
+}
+
+/* Active pagination button */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #e91e63;
+  color: white;
+}
+
+/* Top section with search box */
+.dataTables_wrapper .top {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Bottom section with pagination and length menu */
+.dataTables_wrapper .bottom {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer section adjustments */
+tfoot th {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
