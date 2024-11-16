@@ -2,21 +2,16 @@ on:
   push:
     branches: 
       - main
-
 name: 🚀 Deploy website on push
-
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-    # Step 1: Checkout the latest code from the main branch
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-
-    # Step 2: Initial attempt to sync files to the FTP server
-    - name: 📂 Sync files (attempt 1)
+    
+    - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftpupload.net
@@ -24,17 +19,3 @@ jobs:
         password: ${{ secrets.ftp_password }}
         server-dir: /htdocs/cbt/
         port: 21
-        timeout: 300  # Increase the timeout to avoid premature disconnection
-      continue-on-error: true  # Allow the workflow to continue if this step fails
-
-    # Step 3: Retry deployment if the first attempt fails
-    - name: 📂 Sync files (retry)
-      if: failure()
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ftpupload.net
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: /htdocs/cbt/
-        port: 21
-        timeout: 600  
