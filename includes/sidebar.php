@@ -569,7 +569,7 @@ $user_role = $_SESSION['user_role'] ?? ''; // 'admin', 'staff', 'student'
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="studentAccountDropdown">
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/idCard.php">ID Card</a></li>
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/editStudent.php?id=<?php echo $student_id; ?>">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/editMyProfile.php?id=<?php echo $student_id; ?>">Edit Profile</a></li>
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>/logout.php">Logout</a></li>
                     </ul>
                 </li>

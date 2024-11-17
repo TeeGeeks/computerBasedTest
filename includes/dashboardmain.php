@@ -501,7 +501,7 @@ ORDER BY e.exam_date, e.exam_time
                     <p class="info-text">Phone: <?php echo htmlspecialchars($student['phone_number']); ?></p>
 
                     <div class="d-flex justify-content-center mt-4">
-                        <a href="<?php echo BASE_URL; ?>pages/editStudent.php?id=<?php echo $student_id; ?>" class="btn btn-primary">Edit Profile</a>
+                        <a href="<?php echo BASE_URL; ?>pages/editMyProfile.php?id=<?php echo $student_id; ?>" class="btn btn-primary">Edit Profile</a>
                     </div>
                 </div>
             </div>
